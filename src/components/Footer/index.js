@@ -1,4 +1,7 @@
-import styled from 'styled-components'
+/* eslint-disable linebreak-style */
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   background-color: #00000070;
