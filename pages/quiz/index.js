@@ -1,11 +1,17 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable object-shorthand */
+/* eslint-disable react/no-this-in-sfc */
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable linebreak-style */
 import React, { useState, useEffect } from 'react';
 
+import Lottie from 'react-lottie';
+
 import db from '../../db.json';
+import animationChest from '../../src/assets/lottie/treasure-chest.json';
 
 import AlternativesForm from '../../src/components/AlternativesForm';
 import Widget from '../../src/components/Widget';
@@ -15,17 +21,32 @@ import QuizContainer from '../../src/components/QuizContainer';
 import Button from '../../src/components/Button';
 import BackLinkArrow from '../../src/components/BackLinkArrow';
 
-function LoadingWidget() {
-  return (
-    <Widget>
-      <Widget.Header>
-        Carregando...
-      </Widget.Header>
+function LoadingChestWidget({ info }) {
+  // eslint-disable-next-line no-unused-vars
+  const [animationState, setAnimationState] = useState({
+    isStopped: false, isPaused: false,
+  });
 
-      <Widget.Content>
-        [Desafio do Loading...]
-      </Widget.Content>
-    </Widget>
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationChest,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
+
+  return (
+    <div>
+      <Lottie
+        options={defaultOptions}
+        height={400}
+        width={400}
+        isStopped={animationState.isStopped}
+        isPaused={animationState.isPaused}
+      />
+      <h3>{info}</h3>
+    </div>
   );
 }
 
@@ -175,7 +196,7 @@ export default function QuizPage() {
   useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1000);
+    }, 4947);
   }, []);
 
   function handleSubmitQuiz() {
@@ -183,7 +204,10 @@ export default function QuizPage() {
     if (nextQuestion < totalQuestions) {
       setCurrentQuestion(nextQuestion);
     } else {
-      setScreenState(screenStates.RESULT);
+      setScreenState(screenStates.LOADING);
+      setTimeout(() => {
+        setScreenState(screenStates.RESULT);
+      }, 4947);
     }
   }
 
@@ -202,7 +226,14 @@ export default function QuizPage() {
           />
         )}
 
-        {screenState === screenStates.LOADING && <LoadingWidget />}
+        {
+          // eslint-disable-next-line operator-linebreak
+          screenState === screenStates.LOADING && (
+          <LoadingChestWidget
+            info={results.length > 0 ? 'Computando Resultado...' : 'Carregando Quiz...'}
+          />
+          )
+        }
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} /> }
       </QuizContainer>
