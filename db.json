@@ -4,25 +4,63 @@
     "description": "Teste os seus conhecimentos sobre One Piece! Esta incrível obra do mestre Eiichiro Oda!",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
+        "image": "https://giffiles.alphacoders.com/354/35458.gif",
+        "title": "Qual o nome do protagonista da série?",
+        "description": "",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Rabbit C. Tuffy",
+          "Monkey B. Ruffy",
+          "Monkey D. Luffy",
+          "Tiger E. Buffy"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://lh3.googleusercontent.com/proxy/CfDKqbGA9pZhWaQptflQ-V5ts8FC23R1TfFrrafQQU6UsKFn4aYHh8Dp1QhBVZID1TKrufTte8HmKHIvqOIkLBAW2lwFZ7g6uVf95qSjB2i4X6HJPqHx",
+        "title": "Qual o sonho que o Luffy deseja realizar?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "Comer toda a carne do mundo!",
+          "Encontrar grandes amigos!",
+          "Ser feliz com uma linda garota!",
+          "Se tornar o Rei dos Piratas!"
+        ]
+      },
+      {
+        "image": "https://manualdosgames.com/wp-content/uploads/2020/10/One-Piece-chegar%C3%A1-na-Netflix-1280x720-1.jpg",
+        "title": "Qual foi o primeiro tripulante a aceitar viajar com o Luffy?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Usopp",
+          "Zoro",
+          "Nami",
+          "Sanji"
+        ]
+      },
+      {
+        "image": "https://criticalhits.com.br/wp-content/uploads/2020/06/Gomu-Gomu-no-Pistol-910x512.jpg",
+        "title": "Qual o nome deste ataque?",
+        "description": "",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Gomu Gomu no Pistol",
+          "Gomu Gomu no Gatling (Gun)",
+          "Gomu Gomu no Rifle",
+          "Gomu Gomu no Rocket"
+        ]
+      },
+      {
+        "image": "https://www.einerd.com.br/wp-content/uploads/2020/06/Gol-D.-Roger-One-Piece-capa-890x466.jpg",
+        "title": "Qual o nome do maior pirata que já existiu no mundo de One Piece?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Gold Roger",
+          "Rocks Xebecs",
+          "Gol D. Roger",
+          "Shiki"
         ]
       }
     ],
@@ -37,7 +75,7 @@
         "contrastText": "#FFFFFF",
         "inputText": "#000000",
         "colorButton": "#442BDC",
-        "wrong": "#FF5722",
+        "wrong": "#CC0921",
         "success": "#4CAF50"
       },
       "borderRadius": "4px"
