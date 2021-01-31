@@ -65,7 +65,9 @@
       }
     ],
     "external": [
-      ""
+      "https://aluraquiz-base.alura-challenges.vercel.app/",
+      "https://harry-potter-quiz.brunogerbasi.vercel.app/",
+      "https://quiz-star-wars.mattheussal.vercel.app/"
     ],
     "theme": {
       "colors": {
